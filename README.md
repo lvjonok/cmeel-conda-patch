@@ -8,6 +8,14 @@ This patch appends to the `LD_LIBRARY_PATH` environment variable on `conda activ
 
 Make sure you have `conda` installed.
 
+### Easy way
+
+Run in your terminal:
+
+```bash
+wget -O - https://raw.githubusercontent.com/lvjonok/cmeel-conda-patch/master/patch.sh | bash -s <conda env name>
+```
+
 ### Hard way
 
 1. Clone this repository
