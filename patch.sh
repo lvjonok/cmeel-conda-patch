@@ -16,7 +16,8 @@ python3 -m pip install cmeel
 
 # add cmeel to LD_LIBRARY_PATH on activate
 echo "export ORIG_LD_LIBRARY_PATH=$LD_LIBRARY_PATH" >> ./etc/conda/activate.d/env_vars.sh
-echo "export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH:$(python3 -m cmeel lib)" >> ./etc/conda/activate.d/env_vars.sh
+echo "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(python3 -m cmeel lib)" >> ./etc/conda/activate.d/env_vars.sh
+# TODO: $CONDA_PREFIX/lib was linked previously, but this breaks drivers and other stuff.
 
 # remove cmeel from LD_LIBRARY_PATH on deactivate
 echo "export LD_LIBRARY_PATH=$ORIG_LD_LIBRARY_PATH" >> ./etc/conda/deactivate.d/env_vars.sh
